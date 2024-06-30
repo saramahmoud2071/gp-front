@@ -1,0 +1,65 @@
+        <div className="profile">
+            <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet"/>
+            <div className="profile-card">
+                <h1> My Profile </h1>
+                <img style={{borderRadius:"50%"}}  className="profile-img" src={image || avatar} alt="..." />
+
+                <div className="input-fields">
+                    <h2> First Name </h2>
+                    <input type="text" className="input-value" value={name} 
+                        disabled={isFirstNameDisabled} 
+                        onChange={(e) => {
+                            setName(e.target.value);
+                        }}
+                    />
+                    <button className="edit-icon" onClick={editFirstName}>
+                        <i className="bx bx-pencil"></i>
+                    </button>
+
+                    {/* <h2> Second Name </h2>
+                    <input type="text" className="input-value" value={secondName} 
+                        disabled={isSecondNameDisabled} 
+                        onChange={(e) => {
+                            setSecondName(e.target.value);
+                        }}
+                    />
+                    <button className="edit-icon" onClick={editSecondName}>
+                        <i className="bx bx-pencil"></i>
+                    </button> */}
+{/* 
+                    <h2> Job Description </h2>
+                    <input type="text" className="input-value" value={job} 
+                        disabled={isJobDisabled} 
+                        onChange={(e) => {
+                            setJob(e.target.value);
+                        }}
+                    />
+                    <button className="edit-icon" onClick={editJob}>
+                        <i className="bx bx-pencil"></i>
+                    </button> */}
+
+                    <h2> Email </h2>
+                    <input type="text" className="input-value" value={email} 
+                        disabled={isEmailDisabled} 
+                        onChange={(e) => {
+                            setEmail(e.target.value);
+                        }}
+                    />
+                    <button className="edit-icon" onClick={editEmail}>
+                        <i className="bx bx-pencil"></i>
+                    </button>
+
+                    {/* <h2> Password </h2>
+                    <input type="password" className="input-value" value={password} 
+                        disabled={isPasswordDisabled} 
+                        onChange={(e) => {
+                            setPassword(e.target.value);
+                        }}
+                    />
+                    <button className="edit-icon" onClick={editPassword}>
+                        <i className="bx bx-pencil"></i>
+                    </button> */}
+                </div>
+            </div>
+        </div>
+        
