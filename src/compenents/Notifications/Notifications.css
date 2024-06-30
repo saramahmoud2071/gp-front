@@ -1,0 +1,35 @@
+.notifications {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 12px;
+    min-width: 800px;
+    max-width: 1000px;
+    height: 90px;
+    background-color: #fff;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.notification .notify-image {
+    border-radius: 50%;
+    height: 80px;
+    border: 6px solid #fff;
+}
+
+.notification .description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    width: 600px;
+    color: black;
+}

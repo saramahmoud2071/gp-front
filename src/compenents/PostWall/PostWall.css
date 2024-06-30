@@ -1,0 +1,206 @@
+.post-wall {
+  padding: 5px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.post {
+  margin: 10px;
+  border-radius: 12px;
+  min-width: 700px;
+  max-width: 800px;
+  /* box-shadow: 0 8px 24px rgb(149 157 165 / 20%); */
+}
+
+.add-post {
+    color: #604d92;
+    border: 1px solid #604d92;
+    padding: 15px;
+    width: 110px;
+    text-align: center;
+    position: fixed;
+    display: fixed;
+    right: 1%;
+    cursor: pointer;
+}
+.add-post:hover {
+    background-color: #604d92;
+    color: #fff;
+}
+
+.close-bar {
+  display: flex;
+  justify-content: flex-start;
+}
+
+#closeBtn {
+  margin-left: auto;
+  background-color: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#myDialog{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    padding: 40px;
+
+}
+
+textarea#description {
+    display: block;
+    border: 1px solid #604d92;
+    margin: 15px;
+    margin-left: 0;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+}
+#myDialog h1 {
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+#myDialog input {
+    display: block;
+    border: 1px solid #604d92;
+    margin: 15px;
+    margin-left: 0;
+}
+
+button#submitBtn {
+    background-color: #604d92;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 15px;
+    margin-left: 0;
+}
+
+.img-view{
+
+     display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     max-height: 500px;
+     overflow: scroll;
+}
+
+/* .img-ck {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+} */
+.img-ck  {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    appearance: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid #eee !important;
+    outline: none;
+    cursor: pointer;
+
+  }
+  
+  /* Define the style for the checkbox when it is checked */
+  .img-ck:checked {
+    background-color: #333;
+    border-color: #333;
+  }
+
+  .img-ck::after {
+    content: '\2713'; /* Unicode checkmark character */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 38px;
+    color: #fff;
+    font-weight: bold;
+    opacity: 0; /* Hide the checkmark by default */
+    transition: opacity 0.2s ease-in-out; /* Add a transition effect when the opacity changes */
+  }
+  
+  /* Define the style for the checkbox when it is checked */
+  .img-ck:checked::after {
+    opacity: 1;      /* Show the checkmark when the checkbox is checked */
+  }
+
+    /* Define the style for the file input */
+    .styled-file-input {
+        position: relative;
+        display: inline-block;
+        padding: 10px;
+        background-color: #ccc;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+        overflow: hidden;
+        height: 200px;
+        
+      }
+      
+      /* Define the style for the plus sign pseudo-element
+      .styled-file-input::before {
+        content: '+';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+      } */
+      
+      /* Hide the default file input */
+      .styled-file-input input[type='file'] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+      }
+
+
+      .postimg{
+        display: grid;
+        grid-template-columns: 1fr 1fr; 
+      }
+
+
+    #ReactSimpleImageViewer{
+      left: 100px;
+    top: 0;
+    width: calc(100% - 100px);
+    }
+
+
+    .add-post {
+      background-color: #fff;}
+
+
+      .plus {
+        font-size: 70px;
+        position: absolute;
+        top: 30%;
+        left: 40%;
+    
+      }

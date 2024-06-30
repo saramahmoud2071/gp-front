@@ -1,0 +1,161 @@
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	list-style: none;
+	box-sizing: border-box;
+}
+
+.body {
+    min-height: 100vh;
+	font-family: 'Roboto', sans-serif;
+    position: fixed;
+    z-index: 5;
+}
+
+.sidebar {
+	width: 100px;
+	height: 100%;
+	backdrop-filter: blur(6px);
+	-webkit-backdrop-filter: blur(6px);
+	background: #604d92;
+	box-shadow: 0 8px 32px rgb(2, 4, 24);
+	border-right: 2px solid rgba(255, 255, 255, .09);
+	transition: .4s ease-in-out;
+	height: 100vh;
+}
+
+.sidebar.open {
+	width: 266px;
+}
+
+.sidebar.open .logo {
+	transform: translateX(0%) translateY(0%)
+}
+
+.sidebar .logo {
+	transform: translateX(-10%) translateY(0%)
+}
+
+.sidebar .logo {
+	width: 100%;
+	height: 160px;
+	padding: 20px 15px;
+	display: grid;
+	align-items: center;
+	justify-items: center;
+}
+
+.sidebar .logo img {
+	width: 48px;
+	transition: .4s;
+}
+
+.sidebar.open .logo img {
+	width: 60px;
+}
+
+.sidebar .logo h3 {
+	color: #fff;
+	font-size: 30px;
+	margin-top: 12px;
+	font-variant: small-caps;
+	pointer-events: none;
+	scale: 0;
+	opacity: 0;
+}
+
+.sidebar.open .logo h3 {
+	scale: 1;
+	opacity: 1;
+	transition: .4s;
+	transition-delay: .2s;
+}
+
+.sidebar nav {
+	padding: 0 20px;
+}
+
+.sidebar nav .nav-item {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	border-radius: 4px;
+	width: 100%;
+	height: 40px;
+	padding: 0 16px;
+	margin: 4px 0;
+	color: #fff;
+	transition: .3s;
+	text-decoration: none;
+}
+
+.sidebar nav .nav-item.active {
+	background: rgba(255, 255, 255, .2) !important;
+}
+
+.sidebar nav .nav-item:hover {
+	background: rgba(255, 255, 255, .1);
+}
+
+.sidebar nav .nav-item i {
+	font-size: 24px;
+}
+
+.sidebar nav .nav-item span {
+	font-size: 16px;
+	margin-left: 8px;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.sidebar.open nav .nav-item span {
+	opacity: 1;
+	pointer-events: visible;
+	transition: .4s;
+	transition-delay: .2s;
+}
+
+.sidebar hr {
+	width: 100%;
+	height: 2px;
+	border-radius: 3px;
+	margin: 40px 0 50px;
+	background: rgba(255, 255, 255, .1);
+	opacity: 0;
+}
+
+.sidebar.open hr {
+	opacity: 1;
+	transition: .4s;
+}
+
+.sidebar .toggle {
+	cursor: pointer;
+	position: absolute;
+	color: #fff;
+	top: 180px;
+	right: -20px;
+	font-size: 38px;
+	line-height: 50%;
+	text-align: center;
+	border-radius: 50%;
+	padding: 2px 0 2px 2px;
+	background: linear-gradient(90deg,
+			transparent 50%,
+			rgba(10, 10, 10, .65) 50%);
+}
+
+.sidebar.open .toggle {
+	transform: translateY(45px);
+}
+
+.sidebar .toggle i {
+	transition: .4s linear;
+}
+
+.sidebar.open .toggle i {
+	transform: rotateY(180deg);
+}
